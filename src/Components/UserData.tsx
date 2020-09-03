@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     Paper: {
         width: '45%',
         backgroundColor: '#c3d4db',
-        padding: '3%',
+        padding: '1.5%',
         margin: '0 auto',
         position: 'absolute',
         top: '55%',
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: 'underline',
     },
     Heading: {
-        paddingTop: '1.7%',
+        paddingTop: '1%',
         [theme.breakpoints.down("xs")]: {
             fontSize: "50px",
         },

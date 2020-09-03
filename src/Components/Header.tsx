@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         backgroundColor: '#054056',
         color: 'white',
-        padding: '1%',
+        padding: '0.6%',
         boxShadow: '0 2px 7px 4px #6e8791',
         [theme.breakpoints.down("xs")]: {
             padding: "2%",
