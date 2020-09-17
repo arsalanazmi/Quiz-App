@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-between',
     },
     QuizDetail: {
+        color: 'white',
         [theme.breakpoints.down("xs")]: {
             fontSize: '17px'
         },
@@ -25,8 +26,9 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: 'underline',
     },
     Score: {
+        color: 'white',
         textAlign: 'center',
-        backgroundColor: '#999c9e',
+        backgroundColor: '#7b7c7c',
         padding: '5px 20px',
         marginBottom: '3%',
         [theme.breakpoints.down("xs")]: {
@@ -34,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     Heading: {
+        color: 'white',
         textAlign: 'center',
         padding: '1%',
         fontWeight: 'bold',
@@ -43,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     Body: {
+        color: 'white',
         textAlign: 'center',
         padding: '1%',
         [theme.breakpoints.down("xs")]: {
@@ -84,7 +88,11 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'space-around',
         flexWrap: 'wrap',
-    }
+    },
+    Loading: {
+        color: 'white',
+        textAlign: 'center'
+    },
 }));
 
 const TOTAL_QUESTION = 10;
@@ -154,7 +162,7 @@ export const Quiz: React.FC<PageProps> = ({ userData, setRegistered }) => {
             {questions.length !== 0 && userAnswers.length === questions.length ? (
                 <div className={classes.Score}>
                     <Typography variant="h5" className={classes.Result}>Result</Typography>
-                    <Typography variant="h6"> Score: <b>{score}/{TOTAL_QUESTION}</b>
+                    <Typography variant="h6"> Score: <b>{score} out of {TOTAL_QUESTION}</b>
                         <br />
                         Percentage: <b>{((score * 100) / TOTAL_QUESTION).toFixed(2)}%</b>
                     </Typography>
@@ -164,7 +172,7 @@ export const Quiz: React.FC<PageProps> = ({ userData, setRegistered }) => {
             <div className={classes.QuizInfo}>
                 <div><Typography variant="h5" className={classes.QuizDetail} gutterBottom>Category: <b>{userData.category}</b></Typography></div>
                 {!gameOver && userAnswers.length !== TOTAL_QUESTION ?
-                    <div><Typography variant="h5" className={classes.QuizDetail} gutterBottom>Score: <b>{score} / {TOTAL_QUESTION}</b></Typography></div>
+                    <div><Typography variant="h5" className={classes.QuizDetail} gutterBottom>Score: <b>{score}</b></Typography></div>
                     : null}
                 <div><Typography variant="h5" className={classes.QuizDetail} gutterBottom>Difficulty: <b>{userData.difficulty}</b></Typography></div>
             </div>
@@ -186,7 +194,7 @@ export const Quiz: React.FC<PageProps> = ({ userData, setRegistered }) => {
                 </div>
             : null}
 
-            {loading ? <Typography variant="h5" gutterBottom>Loading...</Typography> : null}
+            {loading ? <Typography variant="h5" className={classes.Loading} gutterBottom>Loading...</Typography> : null}
 
             {!loading && !gameOver && userAnswers.length !== TOTAL_QUESTION ? (
                 <QuestionCard

@@ -5,15 +5,16 @@ import Logo from '../Images/Logo.png'
 const useStyles = makeStyles((theme) => ({
     header: {
         display: 'flex',
-        backgroundColor: '#054056',
+        backgroundColor: '#313c3f',
         color: 'white',
         padding: '0.6%',
-        boxShadow: '0 2px 7px 4px #6e8791',
+        boxShadow: '0 1px 10px 2px #676868',
         [theme.breakpoints.down("xs")]: {
             padding: "2%",
         },
     },
     heading: {
+        fontWeight:'bold',
         paddingLeft: '1%',
         [theme.breakpoints.down("xs")]: {
             fontSize: '28px',

@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: 'underline',
     },
     Heading: {
+        color: 'white',
         paddingTop: '1%',
         [theme.breakpoints.down("xs")]: {
             fontSize: "50px",
@@ -51,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     Loading: {
+        color: 'white',
         fontWeight: 'bold',
     },
     resize: {

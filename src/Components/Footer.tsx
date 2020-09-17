@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   heading: {
+    color:'white',
     [theme.breakpoints.between(0, 768)]: {
       fontSize: '16px',
     },
@@ -30,10 +31,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   anchorTag: {
-    color: 'black',
+    color: 'white',
     textDecoration: "none",
     "&:hover": {
-      color: "white",
+      color: "grey",
     },
   },
 }));
