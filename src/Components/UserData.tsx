@@ -11,10 +11,10 @@ const useStyles = makeStyles((theme) => ({
     Paper: {
         width: '45%',
         backgroundColor: '#c3d4db',
-        padding: '1.5%',
+        padding: '5%',
         margin: '0 auto',
         position: 'absolute',
-        top: '55%',
+        top: '60%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
         [theme.breakpoints.down("sm")]: {
