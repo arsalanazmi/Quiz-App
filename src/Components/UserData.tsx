@@ -5,13 +5,12 @@ import cx from "classnames";
 import useWebAnimations, { zoomIn } from "@wellyshen/use-web-animations";
 import { fetchCategory, Difficulty } from "../Services/API";
 import { UserDataProps, categoryArray } from '../Types/QuizTypes'
-import Footer from './Footer'
 
 const useStyles = makeStyles((theme) => ({
     Paper: {
         width: '45%',
         backgroundColor: '#c3d4db',
-        padding: '5%',
+        padding: '2%',
         margin: '0 auto',
         position: 'absolute',
         top: '60%',
@@ -168,7 +167,6 @@ const UserData: React.FC<UserDataProps> = ({ setRegistered, setUser }) => {
                     </form>
                 </Paper>
             }
-            <Footer />
         </div>
     )
 }
