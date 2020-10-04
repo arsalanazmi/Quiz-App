@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         padding: '2%',
         margin: '0 auto',
         position: 'absolute',
-        top: '60%',
+        top: '62%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
         [theme.breakpoints.down("sm")]: {
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     },
     Heading: {
         color: 'white',
-        paddingTop: '3%',
+        paddingTop: '2%',
         [theme.breakpoints.down("xs")]: {
             fontSize: "50px",
         },
