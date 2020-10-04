@@ -18,9 +18,11 @@ const useStyles = makeStyles((theme) => ({
         transform: 'translate(-50%, -50%)',
         [theme.breakpoints.down("sm")]: {
             width: "70%",
+            padding: '3%',
         },
         [theme.breakpoints.down("xs")]: {
             width: "80%",
+            padding: '5%',
         },
     },
     Form: {
@@ -40,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     },
     Heading: {
         color: 'white',
-        paddingTop: '1%',
+        paddingTop: '3%',
         [theme.breakpoints.down("xs")]: {
             fontSize: "50px",
         },
